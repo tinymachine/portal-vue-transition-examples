@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h1>This example uses `portal-vue` {{ portalVueVersion }}</h1>
+
     <button @click="showModalA = true">
       Launch Regular Modal
     </button>
@@ -29,6 +31,7 @@
 
 <script>
 import TheModal from './TheModal.vue'
+import PackageLock from './../../package-lock.json'
 
 export default {
   name: 'TheModalParent',
@@ -40,6 +43,19 @@ export default {
   },
   components: {
     TheModal
+  },
+  computed: {
+    portalVueVersion: () => {
+      return PackageLock.dependencies['portal-vue'].version
+    }
   }
 }
 </script>
+
+<style>
+button {
+  margin-right: .5rem;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+}
+</style>

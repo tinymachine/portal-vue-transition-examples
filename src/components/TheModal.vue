@@ -12,9 +12,8 @@
 
           <div class="modal-footer">
             <slot name="footer">
-              &nbsp;
               <button class="modal-default-button" @click="$emit('close')">
-                OK
+                Close
               </button>
             </slot>
           </div>
@@ -56,7 +55,6 @@ export default {
   border-radius: 2px;
   box-shadow: 0 2px 8px rgba(0, 0, 0, .33);
   transition: all .3s ease;
-  font-family: Helvetica, Arial, sans-serif;
 }
 
 .modal-header h3 {
@@ -66,6 +64,10 @@ export default {
 
 .modal-body {
   margin: 20px 0;
+}
+
+.modal-footer {
+    overflow: auto;
 }
 
 .modal-default-button {
