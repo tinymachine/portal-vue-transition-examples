@@ -1,6 +1,10 @@
 <template>
   <div>
     <h1>portal-vue {{ portalVueVersion }}</h1>
+    <p>
+      Repo for this example:<br>
+      <a :href="repoUrl">{{ repoUrl }}</a>
+    </p>
 
     <button @click="showModalA = true">
       Launch Regular Modal
@@ -47,7 +51,16 @@ export default {
   computed: {
     portalVueVersion: () => {
       return PackageLock.dependencies['portal-vue'].version
+    },
+    repoBranchName: function () {
+      return this.portalVueVersion === '1.3.0'
+        ? 'master'
+        : 'portal-vue-' + this.portalVueVersion
+    },
+    repoUrl: function () {
+      return this.$options.repoBaseUrl + this.repoBranchName
     }
-  }
+  },
+  repoBaseUrl: 'https://github.com/tinymachine/portal-vue-transition-examples/tree/',
 }
 </script>
