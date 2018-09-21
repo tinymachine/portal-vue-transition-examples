@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h1>This example uses `portal-vue` {{ portalVueVersion }}</h1>
+    <h1>portal-vue {{ portalVueVersion }}</h1>
 
     <button @click="showModalA = true">
       Launch Regular Modal
@@ -51,11 +51,3 @@ export default {
   }
 }
 </script>
-
-<style>
-button {
-  margin-right: .5rem;
-  padding: .5rem 1rem;
-  font-size: 1rem;
-}
-</style>

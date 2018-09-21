@@ -5,9 +5,7 @@
         <div class="modal-container">
 
           <div class="modal-body">
-            <slot>
-              default body
-            </slot>
+            <slot></slot>
           </div>
 
           <div class="modal-footer">
@@ -17,6 +15,7 @@
               </button>
             </slot>
           </div>
+
         </div>
       </div>
     </div>

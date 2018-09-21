@@ -18,12 +18,15 @@ export default {
 
 <style>
 body {
-  font-family: -apple-system, BlinkMacSystemFont,
-               'avenir next', avenir,
-               'helvetica neue', helvetica,
-               ubuntu,
-               roboto, noto,
-               'segoe ui', arial,
-               sans-serif;
+  font-family: sans-serif;
+  line-height: 1.4;
+}
+
+button {
+  margin: .5rem .5rem .5rem 0;
+  padding: 1rem 2rem;
+  font-size: 1rem;
+  border: 1px solid lightgray;
+  background-color: white;
 }
 </style>
